@@ -66,6 +66,7 @@ final class AppViewController: UIViewController {
             let payViewController = PayViewController()
             payViewController.delegate = self
             show(viewController: payViewController)
+            
         }
     }
 }
@@ -146,6 +147,16 @@ extension AppViewController: PayViewControllerDelegate {
         deauthorizeViewController.delegate = self
         show(viewController: deauthorizeViewController)
     }
+    
+    func payViewControllerPaymentDone(_ checkoutResults: SQRDCheckoutResult) {
+        let emailReceiptViewController = EmailReceiptViewController()
+        emailReceiptViewController.delegate = self
+        show(viewController: emailReceiptViewController)
+    }
+}
+
+extension AppViewController: EmailReceiptViewControllerDelegate  {
+ 
 }
 
 // MARK: - Transitions

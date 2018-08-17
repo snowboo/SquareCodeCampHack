@@ -19,6 +19,7 @@ import SquareReaderSDK
 
 protocol PayViewControllerDelegate: class {
     func payViewControllerDidRequestDeauthorization(_ payViewController: PayViewController)
+    func payViewControllerPaymentDone(_ checkoutResult: SQRDCheckoutResult)
 }
 
 /**
@@ -45,7 +46,6 @@ final class PayViewController: BaseViewController {
         let prices = [275, 115, 325, 177, 0]
         
         
-        
         titleLabel.text = "Purchase matcha latte for \(format(amount: amount))"
         buttonsStackView.addArrangedSubview(donateButton)
         buttonsStackView.addArrangedSubview(checkoutButton)
@@ -60,7 +60,7 @@ final class PayViewController: BaseViewController {
         // Create checkout parameters
         let checkoutParameters = SQRDCheckoutParameters(amountMoney: money)
         checkoutParameters.note = "donation"
-        checkoutParameters.skipReceipt = false
+        checkoutParameters.skipReceipt = true
         checkoutParameters.additionalPaymentTypes = [.cash]
 
         // Create a checkout controller
@@ -120,8 +120,8 @@ final class PayViewController: BaseViewController {
 extension PayViewController: SQRDCheckoutControllerDelegate {
     func checkoutController(_ checkoutController: SQRDCheckoutController, didFinishCheckoutWith result: SQRDCheckoutResult) {
         // Checkout finished, print the result.
-        //RECEIPT VIEW
-        print(result)
+        //return to RECEIPT VIEW?
+        self.delegate?.payViewControllerPaymentDone(result)
         
         let amountString = format(amount: result.totalMoney.amount)
 //        showAlert(title: "\(amountString) Successfully Charged", message: "See the Xcode console for transaction details. You can refund transactions from your Square Dashboard.")

@@ -27,6 +27,7 @@
 		40BBFA9720A21EAE00D3A5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40BBFA9620A21EAE00D3A5FF /* Assets.xcassets */; };
 		40BBFA9A20A21EAE00D3A5FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BBFA9820A21EAE00D3A5FF /* LaunchScreen.storyboard */; };
 		40BBFAA220A2212900D3A5FF /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BBFAA120A2212900D3A5FF /* AppViewController.swift */; };
+		673ED72121264F5B00909140 /* EmailReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673ED72021264F5B00909140 /* EmailReceiptViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,6 +67,7 @@
 		40BBFA9920A21EAE00D3A5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40BBFA9B20A21EAE00D3A5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40BBFAA120A2212900D3A5FF /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		673ED72021264F5B00909140 /* EmailReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailReceiptViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				40BB4CA420A38735002D3C8E /* PermissionsViewController.swift */,
 				03FF145A20B73E650085C8D1 /* Authorization */,
 				40BBFA9120A21EAE00D3A5FF /* PayViewController.swift */,
+				673ED72021264F5B00909140 /* EmailReceiptViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				40BBFA9220A21EAE00D3A5FF /* PayViewController.swift in Sources */,
 				03FF146220B779A40085C8D1 /* SecondaryButton.swift in Sources */,
 				40BBFA9020A21EAE00D3A5FF /* AppDelegate.swift in Sources */,
+				673ED72121264F5B00909140 /* EmailReceiptViewController.swift in Sources */,
 				03D9619C20BE1C83003A4159 /* DeauthorizeViewController.swift in Sources */,
 				03FF145E20B743C30085C8D1 /* QRAuthorizationViewController.swift in Sources */,
 				03FF148620BDD1680085C8D1 /* ChooseAuthorizationMethodViewController.swift in Sources */,
